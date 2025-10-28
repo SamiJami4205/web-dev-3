@@ -33,6 +33,17 @@
         }
     ?>
     <p>Please fill out this form to contact me.</p>
-    
+    <form action="email.php" method="post">
+        <label for="name">Name: </label>
+        <input type="text" name="name" size="30" maxlength="60" value="
+            <?php if(isset($_POST['name'])) echo $_POST['name']; ?>"><br>
+        <label for="email">Email Address: </label>
+        <input type="email" name="email" size="30" maxlength="80" value="
+            <?php if(isset($_POST['email'])) echo $_POST['email']; ?>"><br>
+        <label for="name">Comments: </label>
+        <textarea name="comments" id="comments" rows="5" cols="30">
+            <?php if(isset($_POST['comments'])) echo $_POST['comments']; ?></textarea><br>
+        <input type="submit" name="submit" value="Send!">
+    </form>
 </body>
 </html>
