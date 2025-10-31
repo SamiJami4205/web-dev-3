@@ -1,0 +1,105 @@
+/* Custom styles for Heroics Inc */
+:root {
+    --heroics-primary: #2b50aa;
+    --heroics-secondary: #23d5ab;
+    --heroics-dark: #1a1a2e;
+    --heroics-light: #f7f7f7;
+}
+
+body {
+    background-color: var(--heroics-light);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header Styles */
+.navbar {
+    background: linear-gradient(135deg, var(--heroics-dark), var(--heroics-primary));
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    color: var(--heroics-light) !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Footer Styles */
+.footer {
+    background: var(--heroics-dark);
+    color: var(--heroics-light);
+    padding: 2rem 0;
+}
+
+/* Cards for divisions */
+.division-card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.division-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Forms */
+.form-control {
+    border-radius: 8px;
+    border: 2px solid #e9ecef;
+}
+
+.form-control:focus {
+    border-color: var(--heroics-secondary);
+    box-shadow: 0 0 0 0.2rem rgba(35, 213, 171, 0.25);
+}
+
+.btn-heroics {
+    background: var(--heroics-primary);
+    color: white;
+    border-radius: 8px;
+    padding: 0.5rem 2rem;
+    transition: all 0.3s ease;
+}
+
+.btn-heroics:hover {
+    background: var(--heroics-secondary);
+    color: var(--heroics-dark);
+}
+
+/* Admin Dashboard */
+.admin-sidebar {
+    background: var(--heroics-dark);
+    color: var(--heroics-light);
+    min-height: 100vh;
+    padding: 2rem 0;
+}
+
+.admin-content {
+    padding: 2rem;
+}
+
+/* Responsive images */
+.img-hero {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Attribution */
+.vecteezy-attribution {
+    font-size: 0.8rem;
+    color: #666;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-in;
+}

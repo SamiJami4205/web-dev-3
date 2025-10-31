@@ -1,0 +1,89 @@
+/* Sticky footer styles based on wk_6
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #f5f5f5;
+}
+
+/* Custom Heroics Inc styles
+-------------------------------------------------- */
+:root {
+    --heroics-primary: #2b50aa;
+    --heroics-secondary: #23d5ab;
+    --heroics-dark: #1a1a2e;
+    --heroics-light: #f7f7f7;
+}
+
+body > .container {
+    padding: 60px 15px 0;
+}
+
+.container .text-muted {
+    margin: 20px 0;
+}
+
+.footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* Navigation */
+.navbar-heroics {
+    background: linear-gradient(135deg, var(--heroics-dark), var(--heroics-primary));
+    border: none;
+}
+
+.navbar-heroics .navbar-brand,
+.navbar-heroics .nav > li > a {
+    color: #fff;
+}
+
+.navbar-heroics .nav > li > a:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+/* Cards and Sections */
+.division-card {
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.division-card:hover {
+    transform: translateY(-5px);
+}
+
+.division-card .card-title {
+    color: var(--heroics-primary);
+}
+
+/* Forms */
+.btn-heroics {
+    background: var(--heroics-primary);
+    color: white;
+    border: none;
+}
+
+.btn-heroics:hover {
+    background: var(--heroics-secondary);
+    color: var(--heroics-dark);
+}
+
+/* Admin area */
+.admin-content {
+    padding: 20px;
+}
