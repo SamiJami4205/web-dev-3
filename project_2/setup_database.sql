@@ -1,20 +1,23 @@
--- Create and select the database (wk_6 style)
+-- Create and select the database
 CREATE DATABASE IF NOT EXISTS heroics_db;
 USE heroics_db;
 
--- Create users table with registration time
+-- Drop existing tables if they exist
+DROP TABLE IF EXISTS users;
+
+-- Create users table
 CREATE TABLE users (
-    user_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    salutation VARCHAR(10) NOT NULL,
-    first_name VARCHAR(20) NOT NULL,
-    last_name VARCHAR(40) NOT NULL,
-    gender ENUM('Male', 'Female', 'Other', 'Prefer not to say') NOT NULL,
-    race VARCHAR(50) NOT NULL,
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    username VARCHAR(50) NOT NULL UNIQUE,
     email VARCHAR(60) NOT NULL UNIQUE,
-    pass VARCHAR(255) NOT NULL,
-    registration_date DATETIME NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    first_name VARCHAR(20),
+    last_name VARCHAR(40),
+    salutation VARCHAR(10),
+    gender ENUM('Male', 'Female', 'Other', 'Prefer not to say'),
+    registration_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     is_admin TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
-    PRIMARY KEY (user_id)
+    PRIMARY KEY (id)
 ) ENGINE=InnoDB;
 
 -- Create user details table

@@ -1,20 +1,124 @@
 /* Custom styles for Heroics Inc */
 :root {
-    --heroics-primary: #2b50aa;
+    --heroics-primary: #1e3d8f;
     --heroics-secondary: #23d5ab;
-    --heroics-dark: #1a1a2e;
-    --heroics-light: #f7f7f7;
+    --heroics-dark: #000080;    /* Navy Blue */
+    --heroics-light: #ffffff;
+    --heroics-accent: #4a90e2;
 }
 
 body {
-    background-color: var(--heroics-light);
+    background-color: var(--heroics-dark);
     font-family: 'Roboto', sans-serif;
+    color: var(--heroics-light);
+    min-height: 100vh;
 }
 
 /* Header Styles */
 .navbar {
-    background: linear-gradient(135deg, var(--heroics-dark), var(--heroics-primary));
+    background: linear-gradient(135deg, #000033, var(--heroics-primary));
     padding: 1rem 0;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Text and Button Styles */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heroics-light);
+    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--heroics-accent);
+    border-color: var(--heroics-accent);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #357abd;
+    border-color: #357abd;
+}
+
+.btn-secondary {
+    background-color: var(--heroics-secondary);
+    border-color: var(--heroics-secondary);
+    color: var(--heroics-dark);
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+/* Table Styles */
+.table {
+    color: var(--heroics-light);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.table th {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: var(--heroics-light);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.table td {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Card Styles */
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.card-header {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: var(--heroics-light);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-body {
+    color: var(--heroics-light);
+}
+
+/* Form Styles */
+.form-control {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--heroics-light);
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: var(--heroics-accent);
+    color: var(--heroics-light);
+    box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
+}
+
+/* Alert Styles */
+.alert {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--heroics-light);
+}
+
+/* Link Styles */
+a {
+    color: var(--heroics-accent);
+}
+
+a:hover {
+    color: #357abd;
 }
 
 .navbar-brand {
