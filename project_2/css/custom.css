@@ -1,10 +1,10 @@
 /* Custom styles for Heroics Inc */
 :root {
-    --heroics-primary: #1e3d8f;
-    --heroics-secondary: #23d5ab;
-    --heroics-dark: #000080;    /* Navy Blue */
-    --heroics-light: #ffffff;
-    --heroics-accent: #4a90e2;
+    --heroics-primary: #000080;    /* Navy Blue */
+    --heroics-secondary: #23d5ab;  /* Teal accent */
+    --heroics-dark: #0f1530;       /* Deep blue background */
+    --heroics-light: #ffffff;      /* White text */
+    --heroics-accent: #4a90e2;     /* Bright blue accents */
 }
 
 body {
@@ -159,6 +159,24 @@ a:hover {
     font-size: 1.5rem;
 }
 
+/* Ensure navbar links and toggler are visible on the dark gradient */
+.navbar .nav-link {
+    color: var(--heroics-light) !important;
+    font-weight: 500;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: var(--heroics-secondary) !important;
+}
+
+/* Make the navbar-toggler icon visible when using a custom background */
+.navbar-toggler {
+    border-color: rgba(255,255,255,0.15);
+}
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
 /* Footer Styles */
 .footer {
     background: var(--heroics-dark);
@@ -187,7 +205,8 @@ a:hover {
 
 .form-control:focus {
     border-color: var(--heroics-secondary);
-    box-shadow: 0 0 0 0.2rem rgba(35, 213, 171, 0.25);
+    /* match secondary tint */
+    box-shadow: 0 0 0 0.2rem rgba(255, 177, 78, 0.18);
 }
 
 .btn-heroics {
