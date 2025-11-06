@@ -1,9 +1,10 @@
 /* Custom styles for Heroics Inc */
 :root {
-    --heroics-primary: #2b50aa;
-    --heroics-secondary: #23d5ab;
-    --heroics-dark: #1a1a2e;
-    --heroics-light: #f7f7f7;
+    /* Modified palette to make project_2 distinct from the example */
+    --heroics-primary: #3a6fbf; /* slightly brighter blue */
+    --heroics-secondary: #ffb14e; /* warm accent */
+    --heroics-dark: #0f1530; /* deeper header background */
+    --heroics-light: #fbfbfb;
 }
 
 body {
@@ -69,7 +70,8 @@ body {
 
 .form-control:focus {
     border-color: var(--heroics-secondary);
-    box-shadow: 0 0 0 0.2rem rgba(35, 213, 171, 0.25);
+    /* match secondary tint */
+    box-shadow: 0 0 0 0.2rem rgba(255, 177, 78, 0.18);
 }
 
 .btn-heroics {

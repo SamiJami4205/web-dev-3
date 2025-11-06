@@ -1,11 +1,11 @@
 <?php
-$page_title = "Heroics Inc - Empowering Heroes";
+$page_title = "Heroics Labs - Empowering Heroes";
 include 'includes/header.html';
 ?>
 
 <div class="hero-section text-center py-5 mb-5 animate-fade-in">
-    <h1 class="display-4">Welcome to Heroics Inc</h1>
-    <p class="lead">Leading the future of superhuman excellence</p>
+    <h1 class="display-4">Welcome to Heroics Labs</h1>
+    <p class="lead">Engineering safer, stronger futures</p>
 </div>
 
 <div class="row g-4">
