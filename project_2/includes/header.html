@@ -28,29 +28,29 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/project_2/index.php">Home</a>
+                        <a class="nav-link" href=".../project_2/index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/project_2/about.php">About</a>
+                        <a class="nav-link" href=".../project_2/about.php">About</a>
                     </li>
                     <?php if (isset($_SESSION['user_id'])): ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="/project_2/public/users.php">Employees</a>
+                            <a class="nav-link" href=".../project_2/public/users.php">Employees</a>
                         </li>
                         <?php if (isset($_SESSION['is_admin']) && $_SESSION['is_admin']): ?>
                             <li class="nav-item">
-                                <a class="nav-link" href="/project_2/admin/dashboard.php">Admin</a>
+                                <a class="nav-link" href=".../project_2/admin/dashboard.php">Admin</a>
                             </li>
                         <?php endif; ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="/project_2/logout.php">Logout</a>
+                            <a class="nav-link" href=".../project_2/logout.php">Logout</a>
                         </li>
                     <?php else: ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="/project_2/register.php">Register</a>
+                            <a class="nav-link" href=".../project_2/register.php">Register</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/project_2/login.php">Login</a>
+                            <a class="nav-link" href=".../project_2/login.php">Login</a>
                         </li>
                     <?php endif; ?>
                 </ul>
